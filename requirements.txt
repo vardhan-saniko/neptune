@@ -1,0 +1,10 @@
+asgiref==3.5.2
+django==4.0.5
+sqlparse==0.4.2
+djangorestframework
+django-rest-knox
+numpy
+networkx
+matplotlib
+pandas
+scipy

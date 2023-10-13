@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>TechBridge Survey</title>
+    <meta charset="utf-8">
+    <meta name="author" content="The Unit for Data Science and Analytics - Arizona State University">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../static/frontend/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <br>
+    <center>
+
+        <!-- Section 1 of the survey -->
+        <div class="card border-dark section-1" style="width: 60%;">
+
+            <div class="card-body">
+              <h4 class="card-title">Introduction</h4>
+              <br>
+              <div class="progress" style="width: 50%;">
+                <div class="progress-bar" role="progressbar" style="width: 33.3%;" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100">Section 1/3</div>
+              </div>
+              <hr>
+
+              <!--
+              <p class="card-text" style="font-size: 0.9em;">
+                The purpose of this study is to examine the impact of NavalX Tech Bridges on their regional business and technology ecosystems. One way to accomplish this goal is to understand professional relationships among persons and organizations in professional circles linked to Tech Bridges. This survey will help create a map of people who work together across their respective organizations. Please make sure you have read and signed the Letter for Informed Consent before continuing with this form.
+                For the purposes of the questions below, any questions that reference your "organization" are asking about your immediate organization. Immediate Organization is defined as everyone who directly reports to the same person.
+                As mentioned in the Informed Consent letter, any identifying information on this form will not be associated with your responses to Section 3: Perceptions of your local Tech Bridge.
+              </p>
+
+
+              <p>
+              <button class="btn btn-dark btn-sm" type="button" id="collapse_show" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" hide>
+                Learn More
+              </button>
+              </p>
+              -->
+              <div class="collapse show" id="collapseExample">
+                <div class="card card-body" style="box-shadow: 0px 0px 0px;" align="left">
+                    <p class="card-text">
+                    <b> The purpose of this study is to examine the impact of the {{name_abbreviation}}TB on its regional business and technology ecosystems. </b> One way to accomplish this goal
+                    is to understand professional relationships among persons and organizations in professional circles linked to Tech Bridges. This survey will help create a
+                    map of people who work together across their respective organizations. For the purposes of the questions below, any questions that reference your 'organization' are asking about your immediate organization.
+                    "Immediate Organization" is defined as everyone who directly reports to the same person.
+                    </p>
+                </div>
+             </div>
+
+             <!--
+             <br>
+
+              <button type="button" class="btn btn-dark btn-sm" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="The purpose of this study is to examine the impact of NavalX Tech Bridges on their regional business and technology ecosystems. One way to accomplish this goal is to understand professional relationships among persons and organizations in professional circles linked to Tech Bridges. This survey will help create a map of people who work together across their respective organizations. Please make sure you have read and signed the Letter for Informed Consent before continuing with this form.
+              For the purposes of the questions below, any questions that reference your 'organization' are asking about your immediate organization. Immediate Organization is defined as everyone who directly reports to the same person.
+              As mentioned in the Informed Consent letter, any identifying information on this form will not be associated with your responses to Section 3: Perceptions of your local Tech Bridge.">
+                  Learn more (type2) popover button
+              </button>
+            -->
+              <br>
+              <form style="width: 100%;" align="left">
+
+                <div class="row">
+                    <div class="col-xl-6 col-md-6 mb-4">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-6 col-md-6 mb-4">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control" id="jobTitle" placeholder="Job Title">
+                </div>
+                <br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Please list your specialty areas or your areas of capacity. </label>
+                  <input type="text" class="form-control" id="specialityAreas" placeholder="Fuels Chemistry, Artificial Intelligence, Additive Manufacturing, etc.">
+                </div>
+                <br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Organization Name:</label>
+                  <input type="text" class="form-control" id="companyName" placeholder="">
+                </div>
+                <br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">When did you join your organization (Month/Year)?</label>
+                  <input type="text" class="form-control" id="joiningDate" placeholder="MM/YYYY">
+                </div>
+                <br>
+
+                <!--
+                <label> Is this organization a Tech Bridge? </label>
+                <br>
+                <br>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="techBridgeRadio" id="techBridge" value="True">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    &nbsp; Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="techBridgeRadio" id="techBridge" value="False">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    &nbsp; No
+                  </label>
+                </div>
+                <br>
+                -->
+
+                <label> Select the Primary Role of your Organization. Check all that apply. </label>
+                <br>
+                <br>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Department of Defense (DoD)" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; Dept. of Defense (DoD)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Non-DoD Federal Government" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; Non-DoD Federal Government
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="State and Local Government" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; State and Local Government
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Academia" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; Academia
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Private Sector" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; Private Sector
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Nonprofit" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; Nonprofit
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Other" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    &nbsp; Other
+                  </label>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Approximately how many people work in your organization?</label>
+                  <input type="text" class="form-control" id="noOfPeople" placeholder="Please specify a number">
+                </div>
+                <br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1"> Knowing your direct supervisor(s) will assist in mapping a network of your regional business and technology ecosystems more effectively.
+                  List all supervisors who directly supervise you, separated by commas <b> (supervisors will never be contacted)</b>.
+                  Please indicate if they are from a different organization than your own. </label>
+                  <input type="text" class="form-control" id="supervisors" placeholder="George Bush, Bill Clinton, etc.">
+                </div>
+                <br>
+
+              </form>
+
+              <button type="button" class="btn btn-primary btn-sm" id="nextButton" onclick="next(2)">Next Section</button>
+            </div>
+
+          </div>
+          <!-- END of section 1 -->
+
+          <br>
+          <br>
+
+          <!-- Section 2 of the survey -->
+          <div class="card border-dark section-2" style="width: 60%;">
+              <div class="card-body">
+                <h4 class="card-title"> Ecosystem Mapping for {{name_abbreviation}}TB </h4>
+                <br>
+                <div class="progress" style="width: 50%;">
+                  <div class="progress-bar" role="progressbar" style="width: 66.6%;" aria-valuenow="66.6" aria-valuemin="0" aria-valuemax="100">Section 2/3</div>
+                </div>
+                <br>
+                <p class="card-text" align="left">The following questions will serve to map out your networks of collaborators across organizations. For the purposes of the questions below, we will be asking about people outside your immediate organization. Immediate Organization is defined as everyone who directly reports to the same person.
+                  The term "organization" designates a department (government) or an entire business.
+                </p>
+                <hr>
+                <h6 class="card-subtitle mb-2 text-muted">Your Network</h6>
+                <p class="card-text" align="left">
+                  <b> The purpose of this study is to examine the impact of the {{name_abbreviation}}TB on its regional business and technology ecosystems. </b>
+                  Projects and programs can often involve work with personnel outside of your immediate organization.
+                  In the questions below, you will be asked to detail some of these contacts who with whom you work.
+                  If you are unable to answer to the extent requested, please list as many names as you can.
+                  When you are satisfied with your responses, you can move to the next section using the button below.
+                </p>
+                <hr>
+
+
+                <form id="section-2-form-1">
+
+                    <label align="left">
+                      This information will be used to understand the professional networks of {{name_abbreviation}} Tech Bridge.
+                      Please list 2 to 5 people OUTSIDE of your organization with whom you work with on a regular basis <b> (at least once a week) </b> for the purposes of
+                      pursuing impactful projects or programs for your work.
+                      Please make sure to include the following information in the provided spaces:
+                        <li> Full Name </li>
+                        <li> Organizational Affilitaion, Department </li>
+                        <li> Whether or not the relationship exists because of an
+                       introduction or event by your local Tech Bridge.</li>
+                     </label>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" id="username" placeholder="Full Name">
+                      </div>
+
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Organization Affiliation, Department">
+                      </div>
+
+                      <div class="col-md-4">
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose Relationship Type...</option>
+                            <option>I did not meet this person because of {{name_abbreviation}} TechBridge</option>
+                            <option>I met this person because of {{name_abbreviation}} TechBridge</option>
+                          </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" id="username" placeholder="Full Name">
+                      </div>
+
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Organization Affiliation, Department">
+                      </div>
+
+                      <div class="col-md-4">
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose Relationship Type...</option>
+                            <option>I did not meet this person because of {{name_abbreviation}} TechBridge</option>
+                            <option>I met this person because of {{name_abbreviation}} TechBridge</option>
+                          </select>
+                      </div>
+                    </div>
+
+                </form>
+
+                <br>
+                <div>
+                  <button type="button" class="btn btn-primary btn-sm" id="addContact-1" onclick="addContact(1)">Add Contact</button>
+                </div>
+                <br>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="dropdown-1" onclick="drop(2)">
+                  Next Question
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"></path>
+                  </svg>
+                </button>
+
+
+                <form id="section-2-form-2">
+                  <hr>
+
+                  <label align="left">
+                      This information will be used to understand the professional networks of {{name_abbreviation}} Tech Bridge.
+                      Please list 2 to 5 people OUTSIDE of your organization with whom you work less regularly <b> (monthly or more) </b> for the purposes of
+                      pursuing impactful projects or programs for your work.
+
+                      Please make sure to include the following information in the provided spaces:
+                        <li> Full Name </li>
+                        <li> Organizational Affilitaion, Department </li>
+                        <li> Whether or not the relationship exists because of an
+                       introduction or event by your local Tech Bridge.</li>
+                        <b> Please do not repeat names that have been previously listed in this section (Section 2). </b>
+                  </label>
+
+                  <br>
+                  <br>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                      </div>
+
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Organization Affiliation, Department">
+                      </div>
+
+                      <div class="col-md-4">
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose Relationship Type...</option>
+                            <option>I did not meet this person because of {{name_abbreviation}} TechBridge</option>
+                            <option>I met this person because of {{name_abbreviation}} TechBridge</option>
+                          </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                      </div>
+
+                      <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Organization Affiliation, Department">
+                      </div>
+
+                      <div class="col-md-4">
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose Relationship Type...</option>
+                            <option>I did not meet this person because of {{name_abbreviation}} TechBridge</option>
+                            <option>I met this person because of {{name_abbreviation}} TechBridge</option>
+                          </select>
+                      </div>
+                    </div>
+
+                </form>
+
+                <br>
+
+                <div>
+                  <button type="button" class="btn btn-primary btn-sm" id="addContact-2" onclick="addContact(2)">Add Contact</button>
+                </div>
+
+                <br>
+                <button type="button" class="btn btn-primary btn-sm button-for-sec3" id="nextButton" onclick="next(3)">Next Section</button>
+              </div>
+         </div>
+         <!-- END of section 2 -->
+
+         <br>
+         <br>
+
+         <!-- Section 3 of the survey -->
+         <div class="card border-dark section-3" style="width: 60%;">
+
+             <div class="card-body">
+               <h4 class="card-title"> Perceptions of {{name_abbreviation}}TB </h4>
+               <br>
+               <div class="progress" style="width: 50%;">
+                 <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Section 3/3 &nbsp; ✅</div>
+               </div>
+               <br>
+
+               <div class="card" style="box-shadow: none;">
+                  <div class="card-body" align="left">
+                    <label> Have you worked with {{name}} ({{name_abbreviation}}TB)? </label>
+                    <br>
+                    <br>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="tb" id="techBridge-question-yes" value="True">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        &nbsp; Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="tb" id="techBridge-question-no" value="False">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        &nbsp; No
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <br>
+
+               <div class="likert-questions">
+
+               <!-- Please fill out the following section if you have worked with a Tech Bridge in the past, or if you are familiar with Tech Bridges. Otherwise, please leave this section blank. -->
+               <!-- As mentioned in the Informed Consent letter, any identifying information on this form
+                    will not be associated with your responses to Section 3: Perceptions of your local Tech Bridge. -->
+               <p class="card-text" align="left">
+                 As mentioned in the Informed Consent letter, the responses to this section will remain completely <b> anonymous. </b>
+                If you feel that you do not have enough information to answer the question, feel free to skip at any time.
+               </p>
+
+                <hr>
+
+                <label> I trust that the {{name_abbreviation}}TB has a comprehensive view of the regional business and collaboration ecosystem. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td> Strongly Disagree </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="1"/>  </label> </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="2"/>  </label> </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="3"/>  </label> </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="4"/>  </label> </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="5"/>  </label> </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="6"/>  </label> </td>
+                      <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-1" value="7"/>  </label> </td>
+                      <td> Strongly Agree </td>
+                  </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> I trust the recommendations of the {{name_abbreviation}}TB when it comes to finding new and productive collaborators. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-2" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> I feel very confident about the skills of the {{name_abbreviation}}TB. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-3" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB is known to be successful at the things it tries to do. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-4" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> Sound principles seem to guide the behavior of {{name_abbreviation}}TB. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-5" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB wants to be accountable to people like me for its actions. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-6" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB can be relied on to keep its promises. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-7" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+
+                <label> {{name_abbreviation}}TB treats people like me fairly and justly. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-8" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB provides information that is relevant to people like me. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-9" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB wants to understand how its decisions affect people like me. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-10" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB wants people like me to know what it is doing and why it is doing it. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-11" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB makes it easy to find the information people like me need. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-12" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+                <br>
+                <br>
+
+                <label> {{name_abbreviation}}TB has the ability to accomplish what it says it will do. </label>
+                <table class="likert">
+                  <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td> Strongly Disagree </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="1"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="2"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="3"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="4"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="5"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="6"/>  </label> </td>
+                    <td> <label class="btn btn-lg btn-default"> <input type="radio" name="likert-13" value="7"/>  </label> </td>
+                    <td> Strongly Agree </td>
+                </tr>
+                </table>
+
+
+                <br>
+            </div> <!-- End of div class likert-questions -->
+            </div>
+         </div>
+
+        <br>
+        <br>
+
+        <div class="card border-dark section-4" style="width: 60%;">
+
+            <div class="card-body">
+              <h4 class="card-title">Anonymous Feedback</h4>
+              <hr>
+
+              <div class="form-group">
+                  <label for="feedback" align="left">Is there anything else you would like to add regarding what you want from your work with the {{name_abbreviation}}TB? If so, please elaborate below.</label>
+                  <br>
+                  <br>
+                  <textarea class="form-control" rows="3" id="feedback"></textarea>
+              </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="card border-dark section-5" style="width: 60%;">
+            <div class="card-body" align="left">
+                <label> Would you like us to contact you to ask additional questions pertaining to your work with the {{name_abbreviation}}TB and/or your local partners? </label>
+                <br>
+                <br>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="futurecontact" id="futurecontact-question-yes" value="True">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    &nbsp; Yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="futurecontact" id="futurecontact-question-no" value="False">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    &nbsp; No
+                  </label>
+                </div>
+
+                <br>
+
+                <div class="contact-details">
+                  <label> In what way would you prefer to be contacted? Please provide one of the below details. </label>
+                  <br>
+                  <div class="row">
+                      <div class="col-xl-6 col-md-6 mb-4">
+                        <div class="form-group">
+                          <input type="email" class="form-control" id="contact-email" placeholder="Email ID">
+                        </div>
+                      </div>
+
+                      <div class="col-xl-6 col-md-6 mb-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="contact-phone" placeholder="Phone Number">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+            </div> <!-- End of card body -->
+        </div> <!-- End of card section-5 -->
+
+        <!-- End of survey -->
+        <br>
+
+        <form id="form" onclick="return confirm('Are you sure you want to submit this survey?');">
+          <button type="submit" class="btn btn-primary btn-sm" id="submitButton">Submit</button>
+        </form>
+        <br>
+        <br>
+
+    </center>
+
+    <!-- JavaScript Bundle with Popper -->
+    {% block extra_js %}
+        <script>
+            var surveyId = '{{ survey_id|escapejs }}';
+        </script>
+        <script src="https://unpkg.com/jquery"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../../static/frontend/index.js"></script>
+  {% endblock %}
+
+  </body>
+
+</html>
+

@@ -1,0 +1,75 @@
+body {
+    font-family: Tahoma, sans-serif !important;
+    font-size: 0.9rem !important;
+    background: #EBF7F4 !important;
+  }
+  
+  input[type=radio], input[type=checkbox] {
+    -ms-transform: scale(1.6); /* IE 9 */
+    -webkit-transform: scale(1.6); /* Chrome, Safari, Opera */
+    transform: scale(1.6);
+  }
+  
+  input[type=text], input[type=email] {
+    font-size: 0.9rem !important;
+  }
+  
+  textarea {
+    font-size: 0.9rem !important;
+  }
+  
+  .radio-button {
+    background: white !important;
+    opacity: 1 !important;
+  }
+  
+  ::-webkit-input-placeholder, select {
+     font-size: 0.9em !important;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+        font-size: 0.9em !important;
+  }
+  
+  ::-moz-placeholder {  /* Firefox 19+ */
+        font-size: 0.9em !important;
+  }
+  
+  input, select, button {
+    margin-top: 0.3rem !important;
+    border-radius: 10px !important;
+  }
+  
+  table {
+    margin-top: 0.5rem;
+  }
+  
+  .card {
+    box-shadow: 5px 5px 10px grey;
+  }
+  
+  .likert { width: 100%; text-align: center; }
+  .likert td { width: 70px; }
+  
+  .popover{
+      max-width: 50% !important; /* Max Width of the popover (depending on the container!) */
+  }
+  
+  #network {
+    width: 100% !important;
+    height: 100vh !important;
+    border: 1px solid lightgray !important;
+    font: 22pt arial !important;
+  }
+  /*
+  input[type=range]::-webkit-slider-thumb {
+      background: red;
+  }
+  input[type=range]::-moz-range-thumb {
+      background: red;
+  }
+  input[type=range]::-ms-thumb {
+      background: red;
+  }
+  */
+  

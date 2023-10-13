@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+  <title>Welcome to Innovative Ecosystem</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body style="font-family: Tahoma, sans-serif">
+  <br>
+  <br>
+  <br>
+  <center>
+
+    <div class="card bg-white mb-3" style="width: 70%;">
+      <!-- <img class="card-img-top" width="200" height="250" src="https://pbs.twimg.com/profile_images/879770248508866560/Df7aTHa-_400x400.jpg" alt="TechBridge Innovation"> -->
+      <div class="card-body">
+        <h5 class="card-title">TechBridge Innovation Ecosystem</h5>
+        <hr>
+        <div style="font-size:0.9rem;">
+          <p class="card-text text-justify">Dear Participant: </p>
+
+          <p class="card-text text-justify">
+            My name is Michael Simeone, and I represent a research team at Arizona State University (ASU), Tempe Campus.
+            In partnership with the {{name}} ({{name_abbreviation}}TB) and the Office for Naval Research (ONR), we
+            are conducting a research study to examine the role of {{name_abbreviation}}TB in its regional network of innovators, and what
+            impacts it may have. Additionally, this study will produce an ecosystem map of the regional network within
+            which you operate. To ensure transparency, we will provide an update, including preliminary findings, to all
+            participants in this study in the summer of 2021.
+          </p>
+
+          <p class="card-text text-justify">
+            I am requesting your participation, which will involve completing the following survey about your perception
+            of a Tech Bridge as well as asking you to name people with whom you have collaborated recently.
+          </p>
+
+          <p class="card-text text-justify">
+            Your participation in this study is voluntary. If you choose not to participate or to withdraw from the
+            study at any time, there will be no penalty to your position or compensation. The survey should take no more
+            than 30 minutes. However, it may take a significantly smaller amount of time. The survey will collect
+            identifying information. Namely, your first and last name, as well as your organizational affiliation. Any
+            responses from the final section of the survey about your perception of the Tech Bridge will remain
+            anonymous and de-identified. Any responses to the section that asks about your collaborators, however, will
+            be visible to the {{name_abbreviation}}TB; your name associated with your position, as well as data from your LinkedIn profile
+            if you choose to submit it, will be visible in the network map constructed from these surveys. First and
+            second sections will be handled separately such that you will remain anonymous when sharing any of your
+            perceptions of {{name_abbreviation}}TB in other survey materials. For your collaborator lists, your identifying information
+            will be viewable by {{name_abbreviation}}TB leadership, but will not be published as part of any public report or research
+            study without written permission.
+          </p>
+
+          <p class="card-text text-justify">
+            We will take measures to use encrypted resources to keep the aforementioned personal information safe,
+            although no resource is immune to security breaches. We will also anonymize data before presenting any
+            results or findings. The results of the research study may be published, but your name will not be used. If
+            you have any questions concerning the research study, please call me at (217)-377-0850 or e-mail me at
+            msimeone@asu.edu. This research has been approved by the ASU Institutional Review Board (IRB). If you have
+            any questions concerning the ASU IRB policies or procedures or your rights as a human subject, please
+            contact ASU Research Integrity Office at (480) 965-6788 or research.integrity@asu.edu. Typing your name
+            below and return of the questionnaire will be considered your consent to participate.
+          </p>
+
+          <p class="card-text text-justify" style="margin:0;"> Sincerely, </p>
+          <p class="card-text text-justify" style="margin:0;"> Michael Simeone, PhD </p>
+          <p class="card-text text-justify" style="margin:0;"> Arizona State Univeristy </p>
+          <p class="card-text text-justify" style="margin:0;"> Michael.simeone@asu.edu </p>
+        </div>
+
+        <hr>
+
+        <b>
+          <p class="card-text text-center" style="font-size:0.9rem;"> I hereby consent to the terms of this study by
+            typing my full name below, which serves as a signature:
+          <p>
+        </b>
+        <form action="/survey_page2" method="POST" onsubmit="return submitForm()">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" name="username" class="form-control" id="participantName"
+              placeholder="Please enter your full name here" required>
+          </div>
+          <p class="card-text text-center" style="font-size:0.9rem; font-weight: bold;"> Please complete this survey
+            within the next 7 days. </p>
+          <button type="submit" class="btn btn-primary" id="surveyButton">Take the survey</button>
+        </form>
+      </div>
+    </div>
+
+  </center>
+  <br></br>
+  <br></br>
+  <script type="text/javascript">
+    /** This function makes sure that the user doesn't tamper with the required attribute of the input field.
+    ** Even if one removes the required property using the web-inspector, one cannot alter the javascript code which performs the empty string check.
+    */
+    function submitForm() {
+      let name = document.getElementById("participantName").value;
+      if (name == "") return false;
+      return true;
+    }
+
+    window.history.pushState({ page: 1 }, "", "");
+
+    window.onpopstate = function (event) {
+      if (event) {
+        window.location.href = 'http://localhost:3000/';
+        // Code to handle back button or prevent from navigation
+      }
+    }
+
+  </script>
+</body>
+
+</html>
